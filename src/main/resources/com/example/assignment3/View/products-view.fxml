@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.assignment3.presentation.ProductController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Buttons -->
+    <VBox spacing="20.0" alignment="CENTER" layoutX="40" layoutY="40">
+        <Button text="View All Products"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onViewProductsClick"/>
+
+        <Button text="Select a Product"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onSelectProductClick"/>
+
+        <Button text="Insert a Product"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onInsertProductClick"/>
+
+        <Button text="Update a Product"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onUpdateProductClick"/>
+
+        <Button text="Delete a Product"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onDeleteProductClick"/>
+    </VBox>
+
+    <VBox fx:id="findById" spacing="20.0" alignment="CENTER" layoutX="150" layoutY="400" visible="false">
+        <TextField fx:id="id1" promptText="Enter the product's id" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton1" text="Save" onAction="#onSaveSelectProductClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <VBox fx:id="insert" spacing="20.0" alignment="CENTER" layoutX="150" layoutY="400" visible="false">
+        <TextField fx:id="name1" promptText="Enter the product's name" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="price1" promptText="Enter the product's price" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="stock1" promptText="Enter the product's stock" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton2" text="Save" onAction="#onSaveInsertProductClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <VBox fx:id="update" spacing="20.0" alignment="CENTER" layoutX="150" layoutY="400" visible="false">
+        <TextField fx:id="id2" promptText="Enter the product's id" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="name2" promptText="Enter the product's name" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="price2" promptText="Enter the product's price" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="stock2" promptText="Enter the product's stock" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton3" text="Save" onAction="#onSaveUpdateProductClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <VBox fx:id="deleteOp" spacing="20.0" alignment="CENTER" layoutX="150" layoutY="400" visible="false">
+        <TextField fx:id="id3" promptText="Enter the product's id" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton4" text="Save" onAction="#onSaveDeleteProductClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+
+    <!-- TableView -->
+    <VBox spacing="20.0" alignment="CENTER_LEFT" layoutX="350" layoutY="35" prefWidth="180">
+        <TableView fx:id="productTable" layoutX="350" layoutY="35" prefWidth="180" prefHeight="320"/>
+    </VBox>
+
+</AnchorPane>

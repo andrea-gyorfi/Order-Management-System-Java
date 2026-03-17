@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.assignment3.presentation.ClientController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Buttons -->
+    <VBox spacing="20.0" alignment="CENTER" layoutX="30" layoutY="40">
+        <Button text="View All Clients"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onViewClientsClick"/>
+
+        <Button text="Select a Client"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onSelectClientClick"/>
+
+        <Button text="Insert a Client"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onInsertClientClick"/>
+
+        <Button text="Update a Client"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onUpdateClientClick"/>
+
+        <Button text="Delete a Client"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onDeleteClientClick"/>
+    </VBox>
+
+    <!--  -->
+    <VBox fx:id="findById" spacing="20.0" alignment="CENTER" layoutX="210" layoutY="400" visible="false">
+        <TextField fx:id="id1" promptText="Enter the client's id" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton1" text="Save" onAction="#onSaveSelectClientClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <VBox fx:id="insert" spacing="20.0" alignment="CENTER" layoutX="210" layoutY="400" visible="false">
+        <TextField fx:id="name1" promptText="Enter the client's name" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="address1" promptText="Enter the client's address" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="email1" promptText="Enter the client's email" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="age1" promptText="Enter the client's age" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="phone1" promptText="Enter the client's phone number" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton2" text="Save" onAction="#onSaveInsertClientClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <VBox fx:id="update" spacing="20.0" alignment="CENTER" layoutX="210" layoutY="400" visible="false">
+        <TextField fx:id="id2" promptText="Enter the client's id" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="name2" promptText="Enter the client's name" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="address2" promptText="Enter the client's address" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="email2" promptText="Enter the client's email" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="age2" promptText="Enter the client's age" prefWidth="300" prefHeight="30"/>
+        <TextField fx:id="phone2" promptText="Enter the client's phone number" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton3" text="Save" onAction="#onSaveUpdateClientClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <VBox fx:id="deleteOp" spacing="20.0" alignment="CENTER" layoutX="210" layoutY="400" visible="false">
+        <TextField fx:id="id3" promptText="Enter the client's id" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton4" text="Save" onAction="#onSaveDeleteClientClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <!-- TableView -->
+    <VBox spacing="20.0" alignment="CENTER" layoutX="240" layoutY="35" prefWidth="460">
+        <TableView fx:id="clientTable" layoutX="460" layoutY="340" prefWidth="500" prefHeight="320"/>
+    </VBox>
+
+</AnchorPane>

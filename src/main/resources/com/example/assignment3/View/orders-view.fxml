@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.assignment3.presentation.OrderController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Buttons -->
+    <VBox spacing="20.0" alignment="CENTER" layoutX="110" layoutY="60">
+        <Button text="View All Orders"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onViewOrdersClick"/>
+
+        <Button text="Select an Order"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onSelectOrderClick"/>
+
+        <Button text="Make an Order"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onMakeOrderClick"/>
+
+        <Button text="View Bills"
+                style="-fx-font-size: 20px;
+                       -fx-background-color: black;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+                onAction="#onViewBillsClick"/>
+    </VBox>
+
+    <VBox fx:id="findById" spacing="20.0" alignment="CENTER" layoutX="210" layoutY="400" visible="false">
+        <TextField fx:id="id1" promptText="Enter the order's id" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton1" text="Save" onAction="#onSaveSelectOrderClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <VBox fx:id="makeOrder" spacing="20.0" alignment="CENTER" layoutX="210" layoutY="650" visible="false">
+        <TextField fx:id="quantity1" promptText="Enter the product's quantity for the order" prefWidth="300" prefHeight="30"/>
+        <Button fx:id="saveButton2" text="Save" onAction="#onSaveMakeOrderClick" style="-fx-font-size: 14px; -fx-background-color: #82c700; -fx-text-fill: black; -fx-padding: 6px; -fx-font-weight: bold; -fx-font-family: 'Georgia';" />
+    </VBox>
+
+    <!-- TableView -->
+    <VBox spacing="20.0" alignment="CENTER_LEFT" layoutX="430" layoutY="35" prefWidth="230">
+        <TableView fx:id="orderTable" layoutX="430" layoutY="35" prefWidth="230" prefHeight="300"/>
+    </VBox>
+    <VBox fx:id="products" spacing="20.0" alignment="CENTER_LEFT" layoutX="50" layoutY="380" prefWidth="170" visible="false">
+        <TableView fx:id="productTable" layoutX="30" layoutY="380" prefWidth="170" prefHeight="250"/>
+    </VBox>
+    <VBox fx:id="clients" spacing="20.0" alignment="CENTER_LEFT" layoutX="280" layoutY="380" prefWidth="460" visible="false">
+        <TableView fx:id="clientTable" layoutX="280" layoutY="380" prefWidth="460" prefHeight="250"/>
+    </VBox>
+
+    <VBox fx:id="billsText" spacing="20.0" alignment="CENTER_LEFT" layoutX="190" layoutY="380" prefWidth="190" visible="false">
+        <Text text="The bills in increasing order based on the amount"
+              style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-font-family: 'Georgia';"/>
+    </VBox>
+    <VBox fx:id="bills" spacing="20.0" alignment="CENTER_LEFT" layoutX="280" layoutY="410" prefWidth="190" visible="false">
+        <TableView fx:id="billTable" layoutX="280" layoutY="410" prefWidth="190" prefHeight="250"/>
+    </VBox>
+
+</AnchorPane>

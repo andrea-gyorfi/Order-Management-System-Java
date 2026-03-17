@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.assignment3.presentation.HelloController">
+    <!-- Title -->
+    <VBox alignment="TOP_CENTER" spacing="10.0" layoutX="165" layoutY="30">
+        <Label text="Orders Management"
+               style="-fx-font-size: 36px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #C70039;
+                      -fx-font-family: 'Georgia';"/>
+    </VBox>
+
+    <!-- Image -->
+    <VBox alignment="CENTER" spacing="10.0" layoutX="190" layoutY="100">
+        <ImageView fitWidth="320" fitHeight="280">
+            <image>
+                <Image url="@../images/pic1.png"/>
+            </image>
+        </ImageView>
+    </VBox>
+
+
+    <!-- Buttons -->
+    <VBox spacing="20.0" alignment="CENTER" layoutX="300" layoutY="420">
+    <Button text="Clients"
+            style="-fx-font-size: 20px;
+                       -fx-background-color: #C70039;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+            onAction="#onClientsClick"/>
+
+    <Button text="Products"
+            style="-fx-font-size: 20px;
+                       -fx-background-color: #C70039;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+            onAction="#onProductsClick"/>
+
+    <Button text="Orders"
+            style="-fx-font-size: 20px;
+                       -fx-background-color: #C70039;
+                       -fx-text-fill: white;
+                       -fx-padding: 10px;
+                       -fx-font-weight: bold;
+                       -fx-font-family: 'Georgia';"
+            onAction="#onOrdersClick"/>
+    </VBox>
+</AnchorPane>
+
