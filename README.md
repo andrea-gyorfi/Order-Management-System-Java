@@ -1,4 +1,5 @@
 # Order Management System (Java)
+![App Preview](screenshot.png)
 
 A Java application for managing client orders using a layered architecture (BLL, DAO, Model, GUI). The system supports CRUD operations for clients, products, and orders, and integrates a MySQL database for persistent storage.
 
